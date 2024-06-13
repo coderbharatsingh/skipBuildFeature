@@ -5,6 +5,10 @@ This repository have a solution if we are using Envoyer for deployment. So let's
 Envoyer creates a new release folder with the latest code from git on every deployment and execute the Envoyer hooks command one by one. If all commands execute successfully in the last step it will update the symbolic link from current release to latest release. So in that way there is no downtime with the website.
 
 ## Need of Skip Build Feature
+```bash
+# The below command execute webpack/skip-old-changes.js file
+npm run skip-old-changes
+```
 If we are working with different technology or we have multiple npm commands for js build. Then this feature really helps us to save the deployment time. For e.g., if we have file change only with one npm command build files envoyer will execute all the npm build commands with every deployment and it will take time for generating build file but we can use the existing build files from the current release folder for those files which do not have code changes. So this feature compare the new release folder and current release folder files and detect the changes for files and if this feature do not found any changes in any files then all npm commands will skip and it will copy the current release files from current to new release path.
 
 ## How Skip Build Feature Works
