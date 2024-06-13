@@ -1,0 +1,16 @@
+{
+    "private": true,
+    "name": "skip-build-feature",
+    "scripts": {
+        "skip-old-changes": "node ./webpack/skip-old-changes.js"
+    },
+    "devDependencies": {
+    },
+    "dependencies": {
+    },
+    "engines": {
+        "node": "v18.16.1",
+        "npm": "9.4.2",
+        "pnpm": "8.6.5"
+    }
+}
